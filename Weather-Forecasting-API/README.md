@@ -1,0 +1,1 @@
+ Create a weather forecasting API using TypeScript with a service like OpenWeatherMap. Users should be able to query the API for weather data based on location and time.

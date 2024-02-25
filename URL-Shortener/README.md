@@ -1,0 +1,1 @@
+ Build a URL shortener service using TypeScript with Express.js or another web framework. Users should be able to input a long URL and receive a shortened version that redirects to the original URL.

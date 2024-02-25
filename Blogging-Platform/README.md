@@ -1,0 +1,1 @@
+ Develop a simple blogging platform where users can create, edit, and delete blog posts. Use TypeScript along with a database and a templating engine like Handlebars or EJS for rendering dynamic content.

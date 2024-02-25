@@ -1,0 +1,1 @@
+ Build a RESTful API using TypeScript with frameworks like Express.js or Nest.js. You can create endpoints for various CRUD operations (Create, Read, Update, Delete) on resources such as users, products, or articles.

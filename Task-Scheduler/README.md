@@ -1,0 +1,1 @@
+ Build a task scheduler application where users can create and schedule tasks to be executed at specific times or intervals. Use TypeScript along with a job scheduling library like Agenda.js or Bull.

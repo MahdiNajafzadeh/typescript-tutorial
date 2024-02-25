@@ -1,0 +1,1 @@
+ Develop a task management system where users can create, update, and delete tasks. Use TypeScript along with a database (e.g., MongoDB or PostgreSQL) and an ORM like TypeORM for data management.

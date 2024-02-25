@@ -1,0 +1,1 @@
+ Build a real-time chat application using TypeScript with frameworks like Socket.io or WebSockets. Users should be able to send and receive messages in real-time, create chat rooms, and join existing ones.

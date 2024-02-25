@@ -1,0 +1,1 @@
+ Develop the backend for an e-commerce platform using TypeScript. Implement features like product management, shopping cart functionality, order processing, and user authentication.

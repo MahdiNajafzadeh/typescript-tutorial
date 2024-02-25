@@ -1,0 +1,1 @@
+ Create a TypeScript-based authentication service using libraries like Passport.js or JWT (JSON Web Tokens). Implement features like user registration, login, logout, password reset, and role-based access control.
