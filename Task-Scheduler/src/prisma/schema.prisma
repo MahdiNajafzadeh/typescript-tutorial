@@ -10,9 +10,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model job {
-  id       Int    @id @default(autoincrement())
-  name     String
-  time     String
-  last_run BigInt
+model task {
+  id          Int    @id @default(autoincrement())
+  name        String
+  description String @default("")
+  time        String
+  every       String @default("once time")
+  last_time   BigInt @default(0)
 }
