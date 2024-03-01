@@ -59,7 +59,6 @@ function paramsValidator(req: Request, res: Response, next: Function) {
 // - Body Validator
 const bodyValidator = {
 	createTask(req: Request, res: Response, next: Function) {
-		console.log("req.body", req.body)
 		const { error } = createTaskSchema.validate(req.body)
 		if (error) {
 			res.json({

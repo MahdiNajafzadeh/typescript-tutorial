@@ -1,21 +1,19 @@
 import { Request, Response } from "express"
-import { PrismaClient } from "@prisma/client"
 import timeConverter from "../helper/time.converter"
-const prisma = new PrismaClient()
+import { myDataSource } from "../entery/datasource"
+import { Task } from "../entery/task.entity"
+
+;(async () => {
+	await myDataSource.initialize()
+})()
 
 async function getTask(req: Request, res: Response) {
 	const { id } = req.params
-
 	try {
-		const task = await prisma.task.findUnique({
-			where: {
-				id: parseInt(id),
-			},
-		})
 		res.json({
 			success: true,
 			method: "getTask",
-			data: task,
+			data: "in change ORM",
 		}).end()
 	} catch (error: any) {
 		res.json({
@@ -28,11 +26,10 @@ async function getTask(req: Request, res: Response) {
 
 async function getTasks(req: Request, res: Response) {
 	try {
-		const tasks = await prisma.task.findMany({})
 		res.json({
 			success: true,
 			method: "getTask",
-			data: tasks,
+			data: "in change ORM",
 		}).end()
 	} catch (error: any) {
 		res.json({
@@ -47,17 +44,18 @@ async function createTask(req: Request, res: Response) {
 	const timeObject = timeConverter(req.body.time)
 	req.body.time_string = timeObject.object.toISOString()
 	req.body.time = timeObject.object.getTime().toString()
-
-	console.log(req.body)
-
+	const task = await myDataSource.getRepository(Task).create(req.body)
+	const results = await myDataSource.getRepository(Task).save(task)
 	try {
-		const task = await prisma.task.create({
-			data: req.body,
+		console.log({
+			success: true,
+			method: "createTask",
+			data: results,
 		})
 		res.json({
 			success: true,
 			method: "createTask",
-			data: task,
+			data: results,
 		}).end()
 	} catch (error: any) {
 		res.status(500)

@@ -1,20 +1,18 @@
 {
-  "compilerOptions": {
-      "target": "es6",
-      "module": "commonjs",
-      "strict": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true,
-      "resolveJsonModule": true,
-      "outDir": "./build",
-      "rootDir": "./src",
-      "baseUrl": "./src",
-      "paths": {
-          "*": ["node_modules/*", "src/types/*"]
-      },
-      "lib": ["ES6"]
-  },
-  "include": ["src/**/*.ts", "src/**/*.json"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+	"compilerOptions": {
+		"target": "es6",
+		"module": "amd",
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"outFile": "./build/index.js",
+		"lib": ["es5", "es6", "dom"]
+	},
+	"include": ["node_modules/**/*.ts", "src/**/*.ts", "src/**/*.json"],
+	"exclude": ["**/*.spec.ts"]
 }
