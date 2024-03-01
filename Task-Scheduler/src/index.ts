@@ -1,14 +1,10 @@
 import express = require("express")
 import dotenv = require("dotenv")
-import routes from "./router.js"
+import router from "./routes"
 dotenv.config()
 
 const app = express()
-
-routes.forEach((route) => {
-	app.use(route)
-})
-
+app.use(router)
 app.listen(process.env.PORT, () => {
 	console.log(`Server Start : PORT : ${process.env.PORT}`)
 })
