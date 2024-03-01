@@ -95,4 +95,8 @@ const bodyValidator = {
 	},
 }
 
-export { paramsValidator, bodyValidator }
+export default {
+	getTask: [paramsValidator],
+	createTask: [bodyValidator.createTask],
+	updateTask: [paramsValidator, bodyValidator.updateTask],
+}
